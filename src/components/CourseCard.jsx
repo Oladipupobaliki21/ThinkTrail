@@ -16,7 +16,7 @@ function CourseCard({ course }) {
         {course.lessons} Lessons • {course.duration}
       </p>
 
-      <button className="mt-3 text-indigo-600 font-medium">
+      <button className="mt-3 text-green-900 font-medium">
         View Course →
       </button>
     </div>
