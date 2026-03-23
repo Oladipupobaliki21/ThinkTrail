@@ -1,3 +1,5 @@
+import heroImage from "../assets/Hero.jpg"
+
 function Hero() {
   return (
     <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 bg-gray-50">
@@ -20,8 +22,8 @@ function Hero() {
     
       <div className="mt-10 md:mt-0">
         <img
-          src="/hero.png"
-          alt="learning"
+          src={heroImage}
+        
           className="w-full md:w-100"
         />
       </div>
