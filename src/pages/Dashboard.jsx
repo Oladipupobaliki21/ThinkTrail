@@ -1,0 +1,56 @@
+import courses from "../data/courses";
+
+function Dashboard() {
+  return (
+    <div className="px-6 md:px-20 py-10">
+      <h1 className="text-3xl font-bold">
+        Your Learning Dashboard
+      </h1>
+
+      <div className="mt-8 space-y-6">
+        {courses.map((course) => {
+          const completedLessons = course.content.filter(
+            (lesson) =>
+              localStorage.getItem(
+                `course-${course.id}-lesson-${lesson.id}`
+              ) === "completed"
+          );
+
+          return (
+            <div
+              key={course.id}
+              className="p-5 border rounded-lg"
+            >
+              <h2 className="text-xl font-semibold">
+                {course.title}
+              </h2>
+
+              <p className="text-gray-600 mt-2">
+                {completedLessons.length} / {course.content.length} lessons completed
+              </p>
+
+              <ul className="mt-3 space-y-2">
+                {completedLessons.map((lesson) => (
+                  <li key={lesson.id} className="text-green-600">
+                    ✅ {lesson.title}
+                  </li>
+                ))}
+              </ul>
+<div className="w-full bg-gray-200 rounded-full h-2 mt-3">
+  <div
+    className="bg-indigo-600 h-2 rounded-full"
+    style={{
+      width: `${(completedLessons.length / course.content.length) * 100}%`,
+    }}
+  ></div>
+</div>
+
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+export default Dashboard;

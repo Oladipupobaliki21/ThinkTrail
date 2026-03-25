@@ -1,4 +1,4 @@
-// import Course1 from "../assets/course1.jpg"
+
 const courses = [
   {
     id: 1,

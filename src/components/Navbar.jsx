@@ -11,6 +11,7 @@ function Navbar() {
       <ul className="hidden md:flex gap-8 text-gray-700">
           <Link to="/">Home</Link>
         <Link to="/courses">Courses</Link>
+        <Link to="/dashboard">Dashboard</Link>
       </ul>
 
       <button className="bg-green-900 text-white px-4 py-2 rounded-lg">
