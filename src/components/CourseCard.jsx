@@ -1,26 +1,26 @@
+import { Link } from "react-router-dom";
+
 function CourseCard({ course }) {
   return (
-    <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+    <div className="bg-white rounded-xl shadow p-4">
       
-      <img
-        src={course.image}
-        alt={course.title}
-        className="rounded-lg w-full h-40 object-cover"
-      />
-
-      <h3 className="mt-3 font-semibold text-lg">
-        {course.title}
-      </h3>
+     <img
+  src={course.image}
+  alt={course.title}
+  className="rounded-lg"
+/>
 
       <p className="text-sm text-gray-500">
         {course.lessons} Lessons • {course.duration}
       </p>
 
-      <button className="mt-3 text-green-900 font-medium">
+      <Link
+        to={`/course/${course.id}`}
+        className="text-green-900 mt-3 inline-block"
+      >
         View Course →
-      </button>
+      </Link>
     </div>
   );
 }
-
-export default CourseCard;
+export default CourseCard

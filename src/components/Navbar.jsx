@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="flex justify-between items-center px-6 md:px-20 py-4 shadow-sm">
@@ -7,9 +9,8 @@ function Navbar() {
       </h1>
 
       <ul className="hidden md:flex gap-8 text-gray-700">
-        <li className="cursor-pointer">Home</li>
-        <li className="cursor-pointer">Courses</li>
-        <li className="cursor-pointer">About</li>
+          <Link to="/">Home</Link>
+        <Link to="/courses">Courses</Link>
       </ul>
 
       <button className="bg-green-900 text-white px-4 py-2 rounded-lg">
