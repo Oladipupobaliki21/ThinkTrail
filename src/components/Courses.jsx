@@ -1,7 +1,6 @@
 
 import courses from "../data/courses";
 import CourseCard from "./CourseCard";
-import React from 'react'
 
 const Courses = () => {
   return (

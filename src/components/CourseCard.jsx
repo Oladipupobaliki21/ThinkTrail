@@ -4,7 +4,7 @@ function CourseCard({ course }) {
   const navigate = useNavigate();
 
   const handleViewCourse = () => {
-    // Go to first lesson of the course
+   
     if (course.content && course.content.length > 0) {
       navigate(`/player/${course.id}/${course.content[0].id}`);
     } else {
