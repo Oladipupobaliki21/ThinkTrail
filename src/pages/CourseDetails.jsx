@@ -43,7 +43,7 @@ function CourseDetails() {
           className="flex justify-between p-3 border rounded-lg mb-2 hover:bg-gray-50"
         >
           <span>{lesson.title}</span>
-          <span className="text-primary">▶</span>
+          <span className="text-green-600">▶</span>
         </Link>
       ))}
     </div>
@@ -53,7 +53,7 @@ function CourseDetails() {
   <div className="bg-white shadow-lg rounded-xl p-5">
     <img src={course.image} className="rounded-lg" />
 
-    <button className="w-full mt-5 bg-primary text-white py-3 rounded-lg">
+    <button className="w-full mt-5 bg-green-600 text-white py-3 rounded-lg">
       Enroll Now
     </button>
 

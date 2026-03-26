@@ -1,4 +1,5 @@
 
+import { FiSearch } from "react-icons/fi";
 import { useState } from "react";
 import courses from "../data/courses";
 import CourseCard from "../components/CourseCard";
@@ -6,7 +7,6 @@ import CourseCard from "../components/CourseCard";
 function CoursesPage() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
-
 
   const filteredCourses = courses.filter((course) => {
     const matchesSearch = course.title
@@ -21,22 +21,23 @@ function CoursesPage() {
 
   return (
     <div className="px-6 md:px-20 py-10 max-w-7xl mx-auto">
-     
-      <h1 className="text-3xl font-bold mb-6">
-        Explore Courses
-      </h1>
+      <h1 className="text-3xl font-bold mb-6">Explore Courses</h1>
 
-     
-      <input
-        type="text"
-        placeholder="Search for courses..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="w-full p-3 border rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
+   
+      <div className="relative mb-6">
+        <FiSearch className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400" />
+        <input
+          type="text"
+          placeholder="Search for courses..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+        />
+      </div>
 
+   
       <div className="flex flex-wrap gap-3 mb-8">
-        {["All", "Development", "Design"].map((cat) => (
+        {["All", "Development", "Design", "Marketing"].map((cat) => (
           <button
             key={cat}
             onClick={() => setCategory(cat)}
@@ -68,7 +69,6 @@ function CoursesPage() {
           <p>No courses found 😢</p>
         </div>
       )}
-
     </div>
   );
 }

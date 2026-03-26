@@ -1,4 +1,4 @@
-// import { FaSlideshare } from "react-icons/fa";
+
 import courses from "../data/courses";
 import CourseCard from "./CourseCard";
 import React from 'react'
@@ -11,11 +11,11 @@ const Courses = () => {
         Popular Courses
       </h2>
 
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-        {courses.map((course) => (
-          <CourseCard key={course.id} course={course} />
-        ))}
-      </div>
+  <div className="grid gap-6 md:grid-cols-3">
+  {courses.slice(0, 3).map((course) => (
+    <CourseCard key={course.id} course={course} />
+  ))}
+</div>
 
     </section>
   )
