@@ -17,56 +17,10 @@ function CourseDetails() {
   }
 
   return (
-//     <div className="px-6 md:px-20 py-10">
-      
-//      {course.image && (
-//   <img
-//     src={course.image}
-//     alt={course.title}
-//     className="w-full max-w-md rounded-lg"
-//   />
-// )}
-
-//       <h1 className="text-3xl font-bold mt-6">
-//         {course.title}
-//       </h1>
-
-//       <p className="text-gray-600 mt-2">
-//         {course.lessons} Lessons • {course.duration}
-//       </p>
-
-//       <button className="mt-6 bg-green-900 text-white px-6 py-3 rounded-lg">
-//         Enroll Now
-//       </button>
-//   <div className="mt-10">
-//   <h2 className="text-2xl font-bold mb-4">
-//     Course Content
-//   </h2>
-
-//   <ul className="space-y-3">
-//     {course.content.map((lesson) => (
-//       <li
-//         key={lesson.id}
-//         className="p-3 border rounded-lg flex justify-between items-center"
-//       >
-//         <span>{lesson.title}</span>
-
-//        <Link
-//        to={`/player/${course.id}/${lesson.id}`}
-//        className="text-green-900 text-sm"
-//       >
-//          ▶ Play
-//       </Link>
-//       </li>
-//     ))}
-//   </ul>
-//   </div>
-//     </div>
-
 
 <div className="grid md:grid-cols-2 gap-10 px-6 md:px-20 py-10">
   
-  {/* LEFT SIDE */}
+ 
   <div>
     <h1 className="text-3xl font-bold">
       {course.title}
@@ -76,7 +30,7 @@ function CourseDetails() {
       {course.lessons} Lessons • {course.duration}
     </p>
 
-    {/* Curriculum */}
+   
     <div className="mt-8">
       <h2 className="text-2xl font-semibold mb-4">
         Course Content
@@ -95,7 +49,7 @@ function CourseDetails() {
     </div>
   </div>
 
-  {/* RIGHT SIDE */}
+
   <div className="bg-white shadow-lg rounded-xl p-5">
     <img src={course.image} className="rounded-lg" />
 
