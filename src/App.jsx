@@ -1,22 +1,56 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+import { Routes, Route, Navigate } from "react-router-dom";
 import CoursesPage from "./pages/CoursesPage";
-import CourseDetails from "./pages/CourseDetails";
 import Player from "./pages/Player";
-import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import PrivateRoute from "./components/PrivateRoute";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard"; // ✅ ADD THIS
 
 function App() {
- return(
-   <Routes>
-    <Route path="/"element= {<Home /> }/>
-    <Route path="/courses" element  = {<CoursesPage />} />
-    <Route path="/course/:id" element = {<CourseDetails />} />
-    <Route path="/player/:courseId/:lessonId" element={<Player />}/>
-    <Route path="/dashboard" element={<Dashboard />} />
-  </Routes>
- )
-  
+  return (
+    <Routes>
+      {/* Home Page */}
+      <Route path="/" element={<Home />} />
+      
 
+      {/* Auth Pages */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+
+      {/* Protected Routes */}
+      <Route
+        path="/courses"
+        element={
+          <PrivateRoute>
+            <CoursesPage />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/player/:courseId/:lessonId"
+        element={
+          <PrivateRoute>
+            <Player />
+          </PrivateRoute>
+        }
+      />
+
+      {/* ✅ Dashboard Route (THIS WAS MISSING) */}
+      <Route
+        path="/dashboard"
+        element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        }
+      />
+
+      {/* Fallback Route */}
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
+  );
 }
 
 export default App;

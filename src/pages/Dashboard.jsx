@@ -38,7 +38,7 @@ function Dashboard() {
               </ul>
 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
   <div
-    className="bg-indigo-600 h-2 rounded-full"
+    className="bg-green-600 h-2 rounded-full"
     style={{
       width: `${(completedLessons.length / course.content.length) * 100}%`,
     }}

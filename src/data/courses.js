@@ -3,7 +3,7 @@ const courses = [
   {
     id: 1,
     title: "UI/UX Design",
-    lessons: 15,
+    lessons: 7,
     category: "Design",
     duration: "10h",
     image: "/course1.jpg",
@@ -21,7 +21,7 @@ const courses = [
   { 
     id: 3, 
     title: "Wireframing Basics",
-    video: "https://player.vimeo.com/video/403098048",
+    video: "https://www.youtube.com/embed/qWIdforZ9x0",
   },
   { 
     id: 4, 
@@ -43,46 +43,8 @@ const courses = [
     title: "Design Systems",
     video: "https://player.vimeo.com/video/403098048",
   },
-  { 
-    id: 8, 
-    title: "Mobile UI Design",
-    video: "https://player.vimeo.com/video/403098048",
-  },
-  { 
-    id: 9, 
-    title: "Web UI Design",
-    video: "https://player.vimeo.com/video/403098048",
-  },
-  { 
-    id: 10, 
-    title: "Portfolio Building",
-    video: "https://player.vimeo.com/video/403098048",
-  },
-  { 
-    id: 11, 
-    title: "Freelancing Tips",
-    video: "https://player.vimeo.com/video/403098048",
-  },
-  { 
-    id: 12, 
-    title: "Project: Design a Mobile App",
-    video: "https://player.vimeo.com/video/403098048",
-  },
-  { 
-    id: 13, 
-    title: "Project: Design a Website",
-    video: "https://player.vimeo.com/video/403098048",
-  },
-  { 
-    id: 14, 
-    title: "Project: Design a Dashboard",
-    video: "https://player.vimeo.com/video/403098048",
-  },
-  { 
-    id: 15, 
-    title: "Project: Design an E-commerce Site",
-    video: "https://player.vimeo.com/video/403098048",
-  },
+   
+ 
 ],
   },
   {
@@ -143,21 +105,7 @@ const courses = [
     duration: "12h",
     image: "/course4.jpg",
       content: [
-      { id: 1, title: "Color Theory" },
-      { id: 2, title: "Typography Basics" },
-      { id: 3, title: "Layout & Composition" },
-      { id: 4, title: "Designing for Web" },
-      { id: 5, title: "Designing for Print" },
-      { id: 6, title: "Using Adobe Photoshop" },
-      { id: 7, title: "Using Adobe Illustrator" },
-      { id: 8, title: "Creating a Portfolio" },
-      { id: 9, title: "Freelancing Tips" },
-      { id: 10, title: "Project: Design a Logo" },
-      { id: 11, title: "Project: Design a Website" },
-      { id: 12, title: "Project: Design a Poster" },
-      { id: 13, title: "Project: Design a Mobile App" },
-      { id: 14, title: "Project: Design a Brand Identity" },
-      { id: 15, title: "Project: Design a Social Media Campaign" },
+      
     ],   
   },  
   {
@@ -219,21 +167,7 @@ const courses = [
     duration: "18h",
     image: "/course7.jpg",
      content: [
-      { id: 1, title: "Python Basics" },
-      { id: 2, title: "Data Structures in Python" },
-      { id: 3, title: "Object-Oriented Programming" },
-      { id: 4, title: "Functional Programming" },
-      { id: 5, title: "Working with Libraries" },
-      { id: 6, title: "Python for Data Analysis" },
-      { id: 7, title: "Python for Web Development" },
-      { id: 8, title: "Python for Automation" },
-      { id: 9, title: "Testing Python Code" },
-      { id: 10, title: "Project: Build a Web Scraper" },
-      { id: 11, title: "Project: Build a Data Visualization" },
-      { id: 12, title: "Project: Build a Web Application" },
-      { id: 13, title: "Project: Build a Machine Learning Model" },
-      { id: 14, title: "Project: Build a Chatbot" },
-      { id: 15, title: "Project: Build a Portfolio Website" },
+     
     ], 
   },
   {
@@ -295,21 +229,7 @@ const courses = [
     duration: "10h",
     image: "/course10.jpg",
       content: [
-      { id: 1, title: "Introduction to Content Creation" },
-      { id: 2, title: "Video Production Basics" },
-      { id: 3, title: "Scripting & Storyboarding" }, 
-      { id: 4, title: "Filming Techniques" },
-      { id: 5, title: "Editing with Adobe Premiere Pro" },
-      { id: 6, title: "Adding Effects with After Effects" },
-      { id: 7, title: "Creating Thumbnails" },
-      { id: 8, title: "Optimizing for YouTube" },
-      { id: 9, title: "Building an Audience" },
-      { id: 10, title: "Project: Create a YouTube Video" },
-      { id: 11, title: "Project: Create a Video Ad" },
-      { id: 12, title: "Project: Create a Social Media Video" },
-      { id: 13, title: "Project: Create a Product Demo Video" },
-      { id: 14, title: "Project: Create a Video Portfolio" },
-      { id: 15, title: "Project: Create a Video Resume" },
+     
     ],
 
   },
@@ -362,7 +282,8 @@ const courses = [
       { id: 14, title: "Project: Create a Social Media Growth Strategy" },
       { id: 15, title: "Project: Create a Social Media Engagement Plan" },
     ],
-  }
+  },
+  
 ]
 
 export default courses;
